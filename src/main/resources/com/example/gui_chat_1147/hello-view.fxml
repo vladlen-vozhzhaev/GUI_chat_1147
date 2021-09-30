@@ -4,17 +4,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="300" prefWidth="250" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_chat_1147.HelloController">
-   <children>
-      <TextArea fx:id="textArea" blendMode="GREEN" editable="false" prefHeight="275" prefWidth="250.0" style="-fx-background-color: #FFFFFF;">
-         <font>
-            <Font name="Roboto Light" size="18.0" />
-         </font></TextArea>
-      <HBox prefHeight="25" prefWidth="250.0">
-         <children>
-            <TextField fx:id="textField" onAction="#handlerSend" prefWidth="170" promptText="Введите сообщение" />
-            <Button mnemonicParsing="false" onAction="#handlerSend" prefWidth="80" style="-fx-background-color: #008000;" text="Отправить" textFill="WHITE" />
-         </children>
-      </HBox>
-   </children>
-</VBox>
+<HBox alignment="CENTER" prefHeight="300" prefWidth="400" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_chat_1147.HelloController">
+   <TextArea fx:id="onlineUsersTextArea" editable="false" prefHeight="Infinity" prefWidth="125">
+      <font>
+         <Font size="14.0" />
+      </font></TextArea>
+   <VBox prefHeight="Infinity" prefWidth="275">
+      <children>
+         <TextArea fx:id="textArea" blendMode="GREEN" editable="false" prefHeight="250" prefWidth="250.0" style="-fx-background-color: #FFFFFF;">
+            <font>
+               <Font name="Roboto Light" size="14.0" />
+            </font></TextArea>
+         <HBox prefHeight="25" prefWidth="250.0">
+            <children>
+               <TextField fx:id="textField" onAction="#handlerSend" prefWidth="195" promptText="Введите сообщение" />
+               <Button mnemonicParsing="false" onAction="#handlerSend" prefWidth="80" style="-fx-background-color: #008000;" text="Отправить" textFill="WHITE" />
+            </children>
+         </HBox>
+         <Button fx:id="connectBtn" mnemonicParsing="false" onAction="#handlerConnection" prefHeight="25" prefWidth="Infinity" text="Подключиться" />
+      </children>
+   </VBox>
+</HBox>
